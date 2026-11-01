@@ -1,0 +1,7 @@
+# Optional: after the OCR models have successfully downloaded and been tested,
+# prevent the OCR worker from accessing external networks. The API/Caddy still
+# need their normal internal networking for browser access and HTTPS renewal.
+# Test actual local model reload before depending on this override.
+services:
+  worker:
+    network_mode: none
